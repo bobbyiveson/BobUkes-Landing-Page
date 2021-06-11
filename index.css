@@ -1,0 +1,557 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+/* font-family: 'Odibee Sans', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+/* font-family: 'Limelight', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+/* header  */
+#nav-bar {
+  background-color: rgb(25, 11, 40);
+  position: fixed;
+  min-height: 5vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#nav-bar ul,
+#footer ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#nav-bar li,
+#footer li {
+  flex: 1 1 16.66%;
+}
+
+#footer {
+  /* position: sticky; */
+  /* width: 100vw; */
+  /* bottom: -5vh;
+  left: 0px; */
+  min-height: 5vh;
+  background-color: rgb(25, 11, 40);
+}
+
+#nav-bar a,
+#footer a {
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+}
+
+#nav-bar a:hover {
+  background-color: white;
+  color: rgb(25, 11, 40);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#header-row-2 {
+  margin-top: 6vh;
+  display: flex;
+  height: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#header-img {
+  display: block;
+  max-height: 100%;
+  width: auto;
+}
+
+#search-bar {
+  border-radius: 25px;
+  padding: 0.4rem;
+  flex: 0.5 1 180px;
+  height: 20%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-family: 'Odibee Sans', cursive;
+  letter-spacing: 0.8px;
+  outline: none;
+}
+
+#site-title {
+  flex: 0 1 210px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#site-title h2 {
+  font-family: 'Limelight', cursive;
+  font-size: 1.8rem;
+}
+
+hr {
+  width: 80%;
+  background-color: black;
+  height: 1.5px;
+  border: none;
+}
+
+address {
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#secondary-nav {
+  min-height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: center;
+  border-top: 2px solid rgb(25, 11, 40);
+  border-bottom: 2px solid rgb(25, 11, 40);
+}
+
+#secondary-nav a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: rgb(25, 11, 40);
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.3rem;
+  text-decoration: none;
+  letter-spacing: 0.7px;
+}
+
+/***************************************/
+
+#intro-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 95vh;
+  background: linear-gradient(
+      180deg,
+      rgba(25, 11, 40, 1),
+      rgba(25, 11, 40, 0.5)
+    ),
+    url(https://wallpapercave.com/wp/wp2159728.jpg) center / cover;
+  color: white;
+}
+
+#intro-page > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  /* border: 2px solid white; */
+}
+
+#intro-page h1,
+#intro-page p,
+#intro-page form {
+  padding: 0.5rem;
+}
+
+#intro-page h1 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+#intro-page p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+#intro-page #shop-button {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 1.5rem;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+#intro-page #shop-button:hover {
+  animation-name: shop-button;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes shop-button {
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+  75% {
+    transform: scale(1.4, 1.4);
+  }
+  90% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1.4, 1.4);
+  }
+}
+#intro-page #form input {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.3rem;
+  background: white;
+  color: rgb(25, 11, 40);
+  letter-spacing: 0.1rem;
+  padding: 0.4rem;
+  border: 3px solid rgb(25, 11, 40);
+  border-radius: 5px;
+  outline: none;
+}
+#intro-page #form input[type='submit'],
+#intro-page #shop-button {
+  cursor: pointer;
+}
+#intro-page #form input[type='email']:focus {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+}
+#intro-page #form input[type='submit']:hover {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+}
+#intro-page #form input[type='submit']:active {
+  background-color: white;
+  color: rgb(25, 11, 40);
+  border: 3px solid rgb(25, 11, 40);
+}
+
+/***************************************/
+
+#uke-description-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 95vh;
+  color: rgb(25, 11, 40);
+}
+
+#uke-description-page > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  /* border: 2px solid black; */
+}
+
+#uke-description-page h2,
+#uke-description-page p {
+  padding: 0.5rem;
+}
+
+#uke-description-page h2 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+#uke-description-page p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.2rem;
+  flex: 0 0 70%;
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+/***************************************/
+
+#uke-size-guide-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 95vh;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 11, 40, 1),
+    rgba(25, 11, 40, 0.5)
+  );
+  color: white;
+  padding: 1rem;
+}
+
+#uke-size-guide-page > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  /* border: 2px solid white; */
+}
+
+#uke-size-guide-page h3,
+#uke-size-guide-page p {
+  padding: 0.1rem;
+  /* border: 2px solid white; */
+}
+
+#uke-size-guide-page h2 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+#uke-size-guide-page h3 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 3px 3px 1px rgb(25, 11, 40);
+}
+
+#uke-size-guide-page p {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.2rem;
+  max-width: 70%;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgb(25, 11, 40);
+}
+
+/***************************************/
+#uke-resources-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 95vh;
+  background-color: white;
+  color: rgb(25, 11, 40);
+  padding: 1rem;
+}
+
+#uke-resources-page > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#uke-resources-page #resource-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  max-width: 100%;
+  flex-wrap: wrap;
+  min-height: 30%;
+}
+
+#resource-links a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: rgb(25, 11, 40);
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+  min-width: 20%;
+  flex: 0 1 10%;
+  border-radius: 5px;
+}
+
+#resource-links a:hover {
+  background-color: rgb(25, 11, 40);
+  color: white;
+}
+
+#uke-resources-page h2,
+#uke-resources-page p {
+  padding: 0.1rem;
+}
+
+#uke-resources-page h2 {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+#uke-resources-page p {
+  font-family: 'Odibee Sans', cursive;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+#video {
+  display: flex;
+  flex-direction: column;
+}
+
+#video iframe {
+  display: block;
+  max-width: 90%;
+  padding: 1rem;
+}
+
+/***************************************/
+
+#best-sellers-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 11, 40, 0.5),
+    rgba(25, 11, 40, 1)
+  );
+  color: white;
+  /* border-top: 1px solid white; */
+  padding: 1rem;
+}
+
+#best-sellers-page h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'Odibee Sans', cursive;
+  text-shadow: 4px 4px 1px rgb(25, 11, 40);
+  letter-spacing: 0.1rem;
+  padding: 0.1rem;
+}
+
+#best-sellers-page #best-sellers-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  gap: 30px;
+  width: 100%;
+  background-color: transparent;
+}
+
+/********************************/
+
+#best-sellers-box .seller-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 100px;
+  gap: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(25, 11, 40);
+}
+
+.seller-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 220px;
+  background-color: white;
+  border: 2px solid rgb(25, 11, 40);
+  border-radius: 5px;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@keyframes seller-item-forward {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 1px 1px 20px 10px white;
+  }
+}
+@keyframes seller-item-backward {
+  0% {
+    box-shadow: 1px 1px 20px 10px white;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.seller-item:hover {
+  animation-name: seller-item-forward;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+.seller-item:not(:hover) {
+  animation-name: seller-item-backward;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 2.5s;
+}
+
+.seller-item img {
+  min-width: 118px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.seller-item a {
+  max-width: 70%;
+  color: rgb(25, 11, 40);
+  text-decoration: none;
+  border: 1px solid rgb(25, 11, 40);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.seller-item a:hover {
+  color: white;
+  background-color: rgb(25, 11, 40);
+}
+
+.seller-item h3 {
+  line-height: 1.4rem;
+}
+.seller-item p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 912px) {
+  #header-row-2 {
+    margin-top: 9.5vh;
+  }
+}
+@media (max-width: 548px) {
+  #header-row-2 {
+    margin-top: 13vh;
+  }
+}
